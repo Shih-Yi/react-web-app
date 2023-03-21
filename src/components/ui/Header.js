@@ -25,57 +25,60 @@ const ElevationScroll = (props) => {
 const Header = (props) => {
   const theme = useTheme()
   return (
-    <ElevationScroll {...props}>
-      <AppBar>
-        <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-              marginRight: "2rem",
-            }}
-          >
-            <img alt="favicon" src={favicon} />
-            <Typography
-              color="secondary"
+    <React.Fragment>
+      <ElevationScroll {...props}>
+        <AppBar>
+          <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
+            <Box
               sx={{
-                fontSize: "1.25rem",
-                fontFamily: "Inter, sans-serif",
-                letterSpacing: "0.15px",
-                fontWeight: 600,
-                lineHeight: "normal",
-                textTransform: "uppercase",
-                margin: "0px 0px 0px 0.75rem",
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+                marginRight: "2rem",
               }}
             >
-              Unrealos
-            </Typography>
-          </Box>
+              <img alt="favicon" src={favicon} />
+              <Typography
+                color="secondary"
+                sx={{
+                  fontSize: "1.25rem",
+                  fontFamily: "Inter, sans-serif",
+                  letterSpacing: "0.15px",
+                  fontWeight: 600,
+                  lineHeight: "normal",
+                  textTransform: "uppercase",
+                  margin: "0px 0px 0px 0.75rem",
+                }}
+              >
+                Unrealos
+              </Typography>
+            </Box>
 
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-            }}
-          >
-            <PublicIcon sx={{ padding: "8px" }} />
-
-            <Button
-              variant="contained"
+            <Box
               sx={{
-                backgroundColor: theme.palette.common.blue,
-                color: "white",
-                marginLeft: "1rem",
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
               }}
             >
-              Login
-            </Button>
-          </Box>
-        </Toolbar>
-      </AppBar>
-    </ElevationScroll>
+              <PublicIcon sx={{ padding: "8px" }} />
+
+              <Button
+                variant="contained"
+                sx={{
+                  backgroundColor: theme.palette.common.blue,
+                  color: "white",
+                  marginLeft: "1rem",
+                }}
+              >
+                Login
+              </Button>
+            </Box>
+          </Toolbar>
+        </AppBar>
+      </ElevationScroll>
+      <Toolbar />
+    </React.Fragment>
   )
 }
 
